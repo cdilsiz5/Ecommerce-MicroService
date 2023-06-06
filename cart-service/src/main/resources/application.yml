@@ -4,7 +4,7 @@ spring:
   application:
     name: cart-service
   datasource:
-    password: Osman3
+    password: 
     url: jdbc:postgresql://localhost:5432/cart-service
     username: postgres
   jpa:
