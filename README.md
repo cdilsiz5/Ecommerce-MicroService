@@ -15,13 +15,7 @@ This is an e-commerce application implemented as a set of microservices. The app
 - PostgreSQL
 - RabbitMQ (for asynchronous messaging)
 
-## Running the Application
-You need to have Java and Maven installed on your machine to run this application. 
 
-To run a specific microservice, navigate to its root directory and run the following command:
-```
-mvn spring-boot:run
-```
 
 ## Microservices
 1. **API Gateway**: This service routes requests to the appropriate microservices.
