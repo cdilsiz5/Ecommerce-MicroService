@@ -1,0 +1,14 @@
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/exception/handler/GlobalExceptionHandler.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/mapper/CategoryMapper.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/repository/CategoryRepository.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/controller/CategoryController.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/entity/Category.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/entity/BaseEntity.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/CategoryServiceApplication.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/exception/ValidationException.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/exception/ApiException.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/request/CreateUpdateCategoryRequest.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/response/ErrorResponse.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/exception/NotFoundException.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/dto/CategoryDto.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce/category-service/src/main/java/com/cihantech/categoryservice/service/CategoryService.java
