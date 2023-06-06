@@ -4,7 +4,7 @@ spring:
   application:
     name: inventory-service
   datasource:
-    password: Osman3
+    password: 
     url: jdbc:postgresql://localhost:5432/inventory-service
     username: postgres
   jpa:
