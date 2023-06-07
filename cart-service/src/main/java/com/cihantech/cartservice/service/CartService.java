@@ -11,20 +11,21 @@ import com.cihantech.clientsservice.product.ProductServiceClient;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.List;
 
 
 @Service
-
 @Slf4j
 public class CartService {
     private final CartRepository repository;
+
     private final ProductServiceClient productServiceClient;
 
+    @Autowired
     public CartService(CartRepository repository, ProductServiceClient productServiceClient) {
         this.repository = repository;
         this.productServiceClient = productServiceClient;

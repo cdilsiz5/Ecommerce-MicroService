@@ -5,12 +5,12 @@ import com.cihantech.categoryservice.entity.Category;
 import com.cihantech.categoryservice.request.CreateUpdateCategoryRequest;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-05-30T03:47:29-0700",
+    date = "2023-06-07T00:11:51-0700",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 19 (Oracle Corporation)"
 )
 @Component
