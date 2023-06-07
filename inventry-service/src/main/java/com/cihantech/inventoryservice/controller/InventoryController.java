@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,7 +19,7 @@ public class InventoryController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public InventoryDto createInventory(@RequestBody CreateUpdateInventoryRequest request){
+    public InventoryDto createInventory(@Valid @RequestBody  CreateUpdateInventoryRequest request){
         return service.createInventory(request);
     }
 
@@ -36,7 +37,7 @@ public class InventoryController {
 
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
-    public InventoryDto updateInventory(@RequestBody CreateUpdateInventoryRequest request){
+    public InventoryDto updateInventory(@Valid @RequestBody CreateUpdateInventoryRequest request){
         return service.updateInventory(request);
     }
     @DeleteMapping("{productId}")

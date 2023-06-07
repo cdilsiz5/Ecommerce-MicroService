@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.math.BigDecimal;
 
 @RestController
@@ -21,7 +22,7 @@ public class CartController {
     }
 
     @PostMapping("{userId}")
-    public ResponseEntity<CartDto> addItem(@PathVariable Long userId, @RequestBody CreateUpdateCartRequest request) {
+    public ResponseEntity<CartDto> addItem(@PathVariable Long userId, @Valid @RequestBody CreateUpdateCartRequest request) {
         CartDto updatedCart = cartService.addItem(userId, request);
         return ResponseEntity.ok(updatedCart);
     }
@@ -34,7 +35,7 @@ public class CartController {
 
     @PutMapping("/{userId}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<CartDto> updateItemQuantity(@PathVariable Long userId, @RequestBody CreateUpdateCartRequest request) {
+    public ResponseEntity<CartDto> updateItemQuantity(@PathVariable Long userId,@Valid @RequestBody CreateUpdateCartRequest request) {
         CartDto updatedCart = cartService.updateItemQuantity(userId, request);
         return ResponseEntity.ok(updatedCart);
     }

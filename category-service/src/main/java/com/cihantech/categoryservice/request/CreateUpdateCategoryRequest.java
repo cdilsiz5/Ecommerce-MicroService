@@ -5,7 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor
@@ -13,13 +15,15 @@ import javax.validation.constraints.NotNull;
 @Builder
 public class CreateUpdateCategoryRequest {
 
-    @NotNull(message ="Name Cannot Be Null")
+    @NotBlank(message = "Category Name cannot be null")
+    @Size(min = 2, max = 30, message = "ategory Name must be between 2 and 30 characters")
     private String categoryName;
 
-    @NotNull(message ="Description Cannot Be Null")
+    @NotBlank(message = "Category Description Name cannot be null")
+    @Size(min = 2, max = 30, message = "Category Description Name must be between 2 and 30 characters")
     private String categoryDescription;
 
-    @NotNull(message ="Parent Category Id  Cannot Be Null")
+    @NotNull(message ="Parent Category ID Cannot Be Null")
     private Long parentCategoryId;
 
 }

@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,7 +32,7 @@ public class UserController {
     }
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public UserDto updateUser(@PathVariable Long id, @RequestBody CreateUpdateUserRequest request){
+    public UserDto updateUser(@PathVariable Long id,@Valid @RequestBody CreateUpdateUserRequest request){
         return service.updateUser(id,request);
     }
     @GetMapping
@@ -47,7 +48,7 @@ public class UserController {
     }
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public UserDto createUser( @RequestBody CreateUpdateUserRequest userRequest){
+    public UserDto createUser( @Valid @RequestBody CreateUpdateUserRequest userRequest){
         return service.createUser(userRequest);
     }
 
