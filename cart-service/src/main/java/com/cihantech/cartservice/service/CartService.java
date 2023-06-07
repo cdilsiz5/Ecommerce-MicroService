@@ -87,6 +87,7 @@ public class CartService {
             cart = saveCart(userId);
         } else {
             cart.setItems(new ArrayList<CartItem>());
+            repository.save(cart);
         }
         log.info("Cart cleared successfully for user id: {}", userId);
     }
