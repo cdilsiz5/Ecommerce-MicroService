@@ -1,0 +1,14 @@
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/dto/CategoryDto.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/exception/ValidationException.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/exception/ApiException.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/controller/CategoryController.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/service/CategoryService.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/entity/Category.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/CategoryServiceApplication.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/response/ErrorResponse.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/exception/NotFoundException.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/entity/BaseEntity.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/exception/handler/GlobalExceptionHandler.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/mapper/CategoryMapper.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/request/CreateUpdateCategoryRequest.java
+/Users/cihandilsiz/IdeaProjects/Ecommerce-MicroService/category-service/src/main/java/com/ecommerce/categoryservice/repository/CategoryRepository.java
