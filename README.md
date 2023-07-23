@@ -14,8 +14,8 @@ This is an e-commerce application implemented as a set of microservices. The app
 - MapStruct
 - PostgreSQL
 - RabbitMQ (for asynchronous messaging)
-
-
+- Docker (for containerization)
+- Zipkin (for distributed tracing)
 
 ## Microservices
 1. **API Gateway**: This service routes requests to the appropriate microservices.
@@ -33,10 +33,45 @@ This is an e-commerce application implemented as a set of microservices. The app
 - Each microservice is a separate Maven project and can be built and run independently.
 - Common code like models and utilities is placed in a separate module and included as a dependency in the microservices that require it.
 
+## Running the Application
+
+### With Docker
+
+1. Navigate to the project directory:
+
+    ```
+    cd Ecommerce-MicroService
+    ```
+
+2. Build the Docker images:
+
+    ```
+    mvn clean package -P build-docker
+    ```
+
+3. Start the application:
+
+    ```
+    docker-compose up -d
+    ```
+
+### Locally
+
+1. Navigate to the project directory:
+
+    ```
+    cd Ecommerce-MicroService
+    ```
+
+2. Run the application:
+
+    ```
+    mvn spring-boot:run
+    ```
+
 ## TODO
 - Implement unit and integration tests for the microservices.
 - Implement Spring Security and JWT authentication in the AuthService.
 
 ## Contributors
 - [Cihan Dilsiz](https://github.com/cdilsiz5)
-
