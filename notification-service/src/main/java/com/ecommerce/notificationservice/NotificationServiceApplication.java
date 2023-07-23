@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication(
         scanBasePackages ={
-                "com.cihantech.notificationservice",
-                "com.cihantech.amqpservice"
+                "com.ecommerce.notificationservice",
+                "com.ecommerce.amqpservice"
 }
 )
 public class NotificationServiceApplication {

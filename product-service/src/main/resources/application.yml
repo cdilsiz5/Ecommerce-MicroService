@@ -4,9 +4,9 @@ spring:
   application:
     name: product-service
   datasource:
-    password: 
+    password: password
     url: jdbc:postgresql://localhost:5432/product-service
-    username: postgres
+    username: ecommerce
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -20,7 +20,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:password@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     fetch-registry: true
-    register-with-eureka:  true
+    register-with-eureka: true
 

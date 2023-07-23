@@ -4,9 +4,9 @@ spring:
   application:
     name: order-service
   datasource:
-    password: Osman3
+    password: password
     url: jdbc:postgresql://localhost:5432/order-service
-    username: postgres
+    username: ecommerce
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -22,24 +22,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:password@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     fetch-registry: true
-    register-with-eureka:  true
+    register-with-eureka: true
 
-resilience4j:
-  circuitbreaker:
-    instances:
-      orderService:
-        registerHealthIndicator: true
-        slidingWindowSize: 5
-        minimumNumberOfCalls: 10
-        permittedNumberOfCallsInHalfOpenState: 3
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        waitDurationInOpenState: 10s
-        failureRateThreshold: 50
-        eventConsumerBufferSize: 10
-  retry:
-    instances:
-      orderService:
-        maxRetryAttempts: 3
-        waitDuration: 100ms

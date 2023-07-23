@@ -14,12 +14,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CartServiceTest {
    private CartService cartService;
@@ -141,20 +143,20 @@ class CartServiceTest {
         Long userId = 1L;
         UserDto userDto = new UserDto(userId, "Cihan", "Dilsiz", "cdilsiz6@gmail.com", "123456789");
 
-        Cart emptyCart = null;
-        Cart clearedCart = new Cart(1L, 1L, Arrays.asList());
-
         Mockito.when(userServiceClient.getUser(userId)).thenReturn(userDto);
-        Mockito.when(repository.findByUserId(userId)).thenReturn(emptyCart);
-        Mockito.when(repository.save(clearedCart)).thenReturn(clearedCart);
 
-        cartService.clearCartByUserId(userId);
+        cartService.saveCart(userId);
 
-        assertEquals(0, clearedCart.getItems().size());
+        ArgumentCaptor<Cart> cartCaptor = ArgumentCaptor.forClass(Cart.class);
+        Mockito.verify(repository, Mockito.times(1)).save(cartCaptor.capture());
+
+        Cart capturedCart = cartCaptor.getValue();
+        assertEquals(userId, capturedCart.getUserId());
+        assertTrue(capturedCart.getItems().isEmpty());
         Mockito.verify(userServiceClient, Mockito.times(1)).getUser(userId);
-        Mockito.verify(repository, Mockito.times(1)).findByUserId(userId);
-        Mockito.verify(repository, Mockito.times(1)).save(clearedCart);
     }
+
+
     @DisplayName("Should Return CartDto when User Id Exists")
     @Test
     void shouldReturnCartDto_whenUserIdExist() {

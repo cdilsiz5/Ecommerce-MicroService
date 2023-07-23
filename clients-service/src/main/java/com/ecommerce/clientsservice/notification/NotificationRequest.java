@@ -15,4 +15,7 @@ public class NotificationRequest{
        private String toUserEmail;
        private  String message;
 
+       public NotificationRequest(String message) {
+              this.message = message;
+       }
 }
