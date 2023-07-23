@@ -46,7 +46,7 @@ This is an e-commerce application implemented as a set of microservices. The app
 2. Build the Docker images:
 
     ```
-    mvn clean package -P build-docker
+    mvn clean package -P build-docker-images
     ```
 
 3. Start the application:
